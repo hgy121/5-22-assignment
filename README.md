@@ -7,3 +7,5 @@ while a < n+1:
     a += a
     count += 1
 print(8+count)```
+
+안녕
