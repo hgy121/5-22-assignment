@@ -1,5 +1,53 @@
 # 백준 문제 풀이
 
+### 1번 초콜릿 자르기
+```
+a,b = map(int,input().split())
+if a>=b:
+  n = a
+  m = b
+else:
+  n = b
+  m = a
+print(m-1+(n-1)*m)
+```
+가로,세로 값을 입력받는다. 더 큰 열방향으로 자르는 것이 자르는 횟수를 최소화 할 수 있기 때문에 가로a와 세로b를 비교하여 작은 값에 1을 뺀 값과 큰 값에 1을 뺀 값에 작은 값을 곱한 값을 더한다.
+
+### 2번 손가락 게임
+```
+a,b = map(int,input().split())
+
+if a==b: print('=')
+else:
+  if a==0:
+    if b==2: print('>')
+    elif b==5: print('<')
+    else:print('>')
+  elif a==2:
+    if b==0: print('<')
+    elif b==5: print('>')
+    else:print('>')
+  elif a==5:
+    if b==0: print('>')
+    elif b==2: print('<')
+    else:print('>')
+  else:
+    if b==1 or b==3 or b==4: print('=')
+    else: print('<')
+```
+a가 가위,바위,보,이외의 것인 경우로 나누고 또다시 b의 경우를 나눠 그에 맞는 결과를 출력한다.
+
+### 3번 2024년에는 혼자가 아니길
+```
+x,y = map(int,input().split())
+if 2*x<y:
+    print(-1)
+else:
+    print(int(2024*(x/2-y/4)))
+```
+
+
+
 ### 6번 마라탕후루
 ```
 n,p,q = map(int,input().split())
