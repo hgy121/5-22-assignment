@@ -62,7 +62,30 @@ print(d)
 
 ### 5번 버블버블
 ```
+n = int(input())
+a = list(map(int,input().split()))
+b = a.copy()
+count1 = 1
+count2 = 0
 
+a.reverse()
+for j in range(n-1):
+  for i in range(n-j-1):
+    if a[i]>a[i+1]:
+      h = a[i]
+      a[i] = a[i+1]
+      a[i+1] = h
+      count1 +=1
+
+for k in range(n-1):
+  for g in range(n-k-1):
+    if b[g]>b[g+1]:
+      h = b[g]
+      b[g] = b[g+1]
+      b[g+1] = h
+      count2 +=1      
+
+print(min(count1,count2)) 
 ```
 오름차순 정렬 방식인 버블정렬을 이용하여 정렬한다. i번째와 i+1번째 수를 비교하여 큰 수를 뒤로가게 한다. 맨 끝에 가장 큰 수가 있게 되므로 끝에는 비교할 필요가 없다. 때문에 이 과정을 1번씩 줄여서 반복한다. 한번 수의 순서를 뒤집을수 있기 때문에 오름차순으로 만드는데 필요한 최소한의 횟수를 구하기 위해 맨 처음에 뒤집었을때와 안 뒤집었을때의 횟수를 비교하고 작은 수를 출력한다.
 
