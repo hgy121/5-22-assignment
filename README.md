@@ -45,7 +45,19 @@ if 2*x<y:
 else:
     print(int(2024*(x/2-y/4)))
 ```
-x와 y를 이용하여 w를 구하면 x/2-y/4가 되고 불가능한 수치가 되려면 2*x<y 이므로 2*x<y일 경우 -1을, 아닌 경우 
+x와 y를 이용하여 w를 구하면 x/2-y/4가 되고 불가능한 수치가 되려면 2*x<y 이므로 2*x<y일 경우 -1을, 아닌 경우 w에 2024를 곱하여 정수로 바꾸고 출력한다.
+
+### 4번 과민성 대장 증후군
+```
+n,m = map(int, input().split())
+t,d = 0,0
+s = list(map(int,input().split()))
+for i in range(n):
+  t += s[i]
+  if t<0: t=0
+  if t>=m: d += 1
+print(d)
+```
 
 
 ### 6번 마라탕후루
